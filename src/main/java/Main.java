@@ -8,7 +8,10 @@ public class Main {
         Lock lock = new ReentrantLock();
         Condition oneSecondCondition = lock.newCondition();
 
-        new Thread(new Exercise1(timeStart, lock, oneSecondCondition)).start();
-        new Thread(new Exercise2(lock, oneSecondCondition)).start();
+        new Thread(new Exercise1_1(timeStart, lock, oneSecondCondition)).start();
+        new Thread(new Exercise1_2(lock, oneSecondCondition)).start();
+
+
+        
     }
 }

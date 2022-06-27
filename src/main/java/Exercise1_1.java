@@ -3,20 +3,17 @@ import java.util.concurrent.locks.Lock;
 import static java.lang.Thread.sleep;
 
 /*
-        Задание 1
+        Задание 1_1
         Напишите программу, которая каждую секунду отображает на экране данные о времени, прошедшем от начала сессии
         (запуска программы).
-
-        Другой ее поток выводит каждые 5 секунд сообщение "Прошло 5 секунд". Предусмотрите возможность ежесекундного
-        оповещения потока, воспроизводящего сообщение, потоком, отсчитывающим время.
 */
 
-public class Exercise1 implements Runnable {
+public class Exercise1_1 implements Runnable {
     private final Long startTime;
     private final Lock lock;
     private final Condition oneSecondCondition;
 
-    public Exercise1(Long startTime, Lock lock, Condition oneSecondCondition) {
+    public Exercise1_1(Long startTime, Lock lock, Condition oneSecondCondition) {
         this.startTime = startTime;
         this.lock = lock;
         this.oneSecondCondition = oneSecondCondition;
